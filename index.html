@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Felicitaciones para Isa</title>
+    <link rel="stylesheet" href="./node_modules/nes.css/css/nes.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="scene">
+      <div class="pattern" aria-hidden="true"></div>
+        <section class="radio-strip nes-container is-rounded is-dark">
+          <div class="radio-copy">
+            <p class="mini-title">Radio anime</p>
+            <p>Anime Nexus en vivo para ponerle opening a la página.</p>
+          </div>
+          <div class="radio-controls">
+            <button id="radioBtn" class="nes-btn chip is-primary">Radio ON</button>
+            <div class="radio-status">
+              <span class="dot online"></span>
+              <span id="radioStatus">El autoreproduccion esta deshabilitado! dame click :p</span>
+            </div>
+          </div>
+        </section>
+        <audio id="radioAudio" preload="none" src="https://cast.animenexusla.com/radio/8000/animenexus"></audio>
+
+      <main class="forum-shell nes-container is-rounded is-dark" role="main">
+        <header class="forum-header">
+          <div>
+            <p class="badge-line">FORO / ANIME / Y2K</p>
+            <h1>Felices vibes para Isa</h1>
+            <p class="subtitle">
+              Un rinconcito antiguo de internet para celebrar a <strong>Isa</strong>, también conocida como <strong>ragghy</strong>.
+            </p>
+          </div>
+          <div class="profile-card nes-container is-rounded is-dark is-centered">
+            <div class="avatar-frame">
+              <img id="avatarArt" alt="Avatar anime de Isa" src="" />
+            </div>
+            <p class="profile-title">Usuario destacado</p>
+            <p class="profile-name">Isa / ragghy</p>
+            <p class="profile-mini">Online desde el corazón</p>
+            <div class="profile-stats">
+              <span>Member 2004</span>
+              <span>•</span>
+              <span id="visitCounter">0128 visitas</span>
+            </div>
+          </div>
+        </header>
+        <section class="pixel-ribbon nes-container is-rounded is-dark">
+          <div class="ribbon-copy">
+            <p class="mini-title">Update del foro</p>
+            <p>Isa / ragghy desbloqueó un tema con brillo, nostalgia y anime pixelado.</p>
+          </div>
+        </section>
+
+        <section class="gif-wall nes-container is-rounded">
+          <figure class="gif-card">
+            <img src="assets/gifs/chat.gif" alt="Gatito tecleando en una computadora" loading="lazy" />
+            <figcaption>Modo chat / 2000s</figcaption>
+          </figure>
+          <figure class="gif-card">
+            <img src="assets/gifs/planet.gif" alt="Planeta girando en estilo clásico de internet" loading="lazy" />
+            <figcaption>Modo planeta / internet clásico</figcaption>
+          </figure>
+          <figure class="gif-card">
+            <img src="assets/gifs/hype.gif" alt="GIF de celebración brillante" loading="lazy" />
+            <figcaption>Modo opening / hype</figcaption>
+          </figure>
+        </section>
+
+        <section class="forum-grid">
+          <article class="post-panel nes-container is-rounded">
+            <div class="post-head">
+              <span class="dot online"></span>
+              <span id="statusLabel">Listo para felicitar</span>
+            </div>
+
+            <section class="anime-stage" aria-label="Escena anime de Isa">
+              <div class="screen-frame">
+                <div class="screen-badge">NEKOS FEED</div>
+                <img id="animeArt" alt="Ilustración anime para Isa" src="" />
+                <div class="screen-glow" aria-hidden="true"></div>
+              </div>
+              <div class="anime-caption">
+                <p id="animeLabel">Cargando una escena brillante para Isa...</p>
+                <div class="anime-meta">
+                  <span id="animeRating">safe</span>
+                  <span>•</span>
+                  <span id="animeTags">girl, retro</span>
+                </div>
+              </div>
+            </section>
+
+            <section class="display nes-container is-rounded is-dark" aria-live="polite" aria-atomic="true">
+              <div class="display-top">
+                <span class="lamp on"></span>
+                <span class="display-tag">Mensaje del día</span>
+              </div>
+              <p id="messageBox" class="message">Toca un botón para disparar una felicitación animada.</p>
+              <div id="sparkLine" class="spark-line" aria-hidden="true"></div>
+              <img class="display-cursor" src="./node_modules/nes.css/assets/cursor.png" alt="" aria-hidden="true" />
+            </section>
+          </article>
+
+          <aside class="sidebar">
+            <section class="nes-container is-rounded is-dark mini-panel">
+              <p class="mini-title">Acciones rápidas</p>
+              <div class="actions" aria-label="Acciones de felicitación">
+                <button class="nes-btn is-primary action-btn" data-message="¡Isa, hoy todo gira a tu favor! Que tengas un día brillante y feliz.">
+                  Brillo total
+                </button>
+                <button class="nes-btn is-success action-btn" data-message="Ragghy, te mando energía bonita, abrazos virtuales y una sonrisa enorme.">
+                  Abrazo virtual
+                </button>
+                <button class="nes-btn is-warning action-btn" data-message="Isa, tu día merece música, pastel y una lluvia de confeti retro.">
+                  Lluvia de confeti
+                </button>
+                <button class="nes-btn is-error action-btn" data-message="¡Felicidades, Isa! Que no falten buenas noticias, planes bonitos y momentos épicos.">
+                  Mensaje épico
+                </button>
+              </div>
+            </section>
+
+            <section class="nes-container is-rounded is-dark mini-panel">
+              <p class="mini-title">Panel del foro</p>
+              <div class="extras">
+                <button id="partyBtn" class="nes-btn chip">Activar fiesta</button>
+                <button id="sceneBtn" class="nes-btn chip">Cambiar escena</button>
+                <button id="resetBtn" class="nes-btn chip ghost">Limpiar pantalla</button>
+              </div>
+            </section>
+          </aside>
+        </section>
+      </main>
+
+      <footer class="footer nes-text is-centered">
+        Hecho con nostalgia, brillo y cariño para Isa / ragghy.
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

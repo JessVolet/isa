@@ -1,0 +1,23 @@
+{
+  "name": "isa",
+  "version": "1.0.0",
+  "description": "Página estática estilo años 2000 para felicitar a Isa / ragghy.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JessVolet/isa.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JessVolet/isa/issues"
+  },
+  "homepage": "https://github.com/JessVolet/isa#readme",
+  "dependencies": {
+    "nes.css": "^2.2.1"
+  }
+}
