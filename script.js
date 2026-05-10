@@ -83,37 +83,37 @@ function stopRadio() {
 }
 
 async function loadRandomScene() {
-  animeLabel.textContent = "Buscando una escena anime para Isa...";
-  animeRating.textContent = "...";
-  animeTags.textContent = "cargando";
+  animeLabel.textContent = "Cargando Miku para Isa...";
+  animeRating.textContent = "SAFE";
+  animeTags.textContent = "miku, vocaloid";
 
   try {
     const loader = new Image();
-    const nextImageSrc = `${nekosImageEndpoint}&v=${Date.now()}`;
+    const mikuSrc = "assets/miku.jpeg";
 
     loader.decoding = "async";
     loader.referrerPolicy = "no-referrer";
 
     const imageSrc = await new Promise((resolve, reject) => {
-      loader.onload = () => resolve(loader.currentSrc || loader.src || nextImageSrc);
+      loader.onload = () => resolve(loader.src);
       loader.onerror = () => reject(new Error("Image load failed"));
-      loader.src = nextImageSrc;
+      loader.src = mikuSrc;
     });
 
     sceneThemeIndex += 1;
     describeScene(imageSrc);
     visits += 1;
     visitCounter.textContent = `${String(visits).padStart(4, "0")} visitas`;
-    showMessage("Nueva escena anime cargada. Ahora sí, la felicitación tiene opening propio.", { confetti: true });
+    showMessage("¡Miku está lista para felicitar a Isa! 🎵", { confetti: true });
   } catch (error) {
-    animeLabel.textContent = "No se pudo cargar la escena anime. Se queda el modo retro local.";
+    animeLabel.textContent = "Miku necesita recargar. Intenta de nuevo.";
     animeRating.textContent = "SAFE";
-    animeTags.textContent = "fallback";
+    animeTags.textContent = "miku";
     animeArt.removeAttribute("src");
     avatarArt.removeAttribute("src");
-    animeArt.alt = "Escena anime no disponible";
-    avatarArt.alt = "Avatar anime no disponible";
-    showMessage("No se pudo conectar a Nekos API, pero el modo retro sigue listo para felicitar a Isa.", { confetti: false });
+    animeArt.alt = "Miku no disponible";
+    avatarArt.alt = "Avatar Miku no disponible";
+    showMessage("No se pudo cargar a Miku, pero la felicitación sigue lista.", { confetti: false });
   }
 }
 
